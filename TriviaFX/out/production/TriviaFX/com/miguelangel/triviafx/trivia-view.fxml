@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="413.0" prefWidth="602.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguelangel.triviafx.Controller">
+  <HBox prefHeight="0.0" prefWidth="602.0" spacing="20.0">
+    <Label text="Host" />
+    <TextField fx:id="tfHost" text="localhost" />
+    <Label text="Port" />
+    <TextField fx:id="tfPort" text="2000" />
+    <Button onAction="#onClickConnect" text="Connect" />
+      <VBox.margin>
+         <Insets left="20.0" />
+      </VBox.margin>
+  </HBox>
+  <HBox prefHeight="0.0" prefWidth="602.0" spacing="20.0">
+    <Label text="Player" />
+    <TextField fx:id="tfPlayer">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></TextField>
+      <VBox.margin>
+         <Insets left="20.0" />
+      </VBox.margin>
+  </HBox>
+  <VBox alignment="CENTER_LEFT" spacing="15.0">
+    <Label fx:id="labQuestion" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="616.0" text="QUESTION" textAlignment="CENTER" />
+    <RadioButton fx:id="rbAnswer1" contentDisplay="CENTER" prefHeight="18.0" prefWidth="632.0" text="answer 1">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgAnswers" />
+         </toggleGroup>
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin></RadioButton>
+    <RadioButton fx:id="rbAnswer2" contentDisplay="CENTER" prefHeight="18.0" prefWidth="663.0" text="answer 2" toggleGroup="$tgAnswers">
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin></RadioButton>
+    <RadioButton fx:id="rbAnswer3" contentDisplay="CENTER" prefHeight="18.0" prefWidth="719.0" text="answer 3" toggleGroup="$tgAnswers">
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin></RadioButton>
+    <RadioButton fx:id="rbAnswer4" contentDisplay="CENTER" prefHeight="18.0" prefWidth="667.0" text="answer 4" toggleGroup="$tgAnswers">
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin></RadioButton>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+  </VBox>
+   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="602.0" spacing="100.0">
+      <children>
+         <Button mnemonicParsing="false" onAction="#onClickSendAnswer" text="Send answer" />
+         <Button mnemonicParsing="false" onAction="#onClickStopPlaying" text="Stop playing" />
+      </children>
+   </HBox>
+</VBox>
